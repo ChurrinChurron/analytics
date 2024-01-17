@@ -1,0 +1,125 @@
+.analytics {
+
+    max-width: 55em;
+    padding: 3em;
+    border-right: 7px solid #e5edff;
+    border-bottom: 10px solid #e5edff;
+    border-radius: 2em;
+    background: #f6f9ff;
+}
+
+.analytics__content {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content__donut {
+
+    position: relative;
+    margin-top: 2em;
+}
+
+.content__donut h4 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content__donut canvas {
+
+    width: 14em !important;
+    height: 14em !important;
+    filter: drop-shadow(0 2px 5px #ccc);
+    margin: 0 auto;
+}
+
+.content__progress {
+
+    margin-top: 3em;
+}
+
+.progress {
+
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+
+}
+
+.progress__data {
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.progress__data progress {
+
+    transform: rotateZ(180deg);
+    border: none;
+    height: .4em;
+}
+
+.progress__data progress::-webkit-progress-bar {
+
+    background: transparent;
+}
+
+.progress__data progress::-webkit-progress-value {
+
+    border-radius: 3em;
+}
+
+#channel::-webkit-progress-value {
+
+    background: #1a52e1;
+}
+
+#direct::-webkit-progress-value {
+
+    background: #6792ff;
+}
+
+#search::-webkit-progress-value {
+
+    background: #4473ea;
+}
+
+#external::-webkit-progress-value {
+
+    background: #96b3ff;
+}
+
+.progress__data p {
+
+    font-weight: 700;
+}
+
+.content__progress a {
+
+    display: block;
+    margin-top: 1.5em;
+    text-align: end;
+}
+
+@media screen and (width >= 768px) {
+    
+    .analytics__content {
+
+        flex-direction: row;
+        gap: 5em;
+    }
+
+    .progress {
+
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+}
